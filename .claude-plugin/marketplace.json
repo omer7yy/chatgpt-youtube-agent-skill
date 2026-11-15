@@ -10,7 +10,11 @@
     {
       "name": "youtube-agent",
       "description": "Eleven YouTube skills for scripts, packaging, editing, retention, Shorts, chapters, SEO, comments, planning, audits and niche research.",
-      "source": "./",
+      "source": {
+        "source": "github",
+        "repo": "omer7yy/chatgpt-youtube-agent-skill",
+        "ref": "main"
+      },
       "category": "productivity",
       "homepage": "https://github.com/omer7yy/chatgpt-youtube-agent-skill"
     }
