@@ -15,16 +15,37 @@ channel, not by how big the channel is.
 
 ## Install
 
-Paste this link into ChatGPT and say **install skill**:
+### Claude Code (plugin)
 
-```
-https://github.com/Jakeschincariol/chatgpt-youtube-agent-skill
+**Inside a Claude Code session**, run these slash commands:
+
+```text
+/plugin marketplace add omer7yy/chatgpt-youtube-agent-skill
+/plugin install youtube-agent@chatgpt-youtube-agent-skill
 ```
 
-Or do it yourself:
+Or, from your system terminal (not inside the Claude chat), use the CLI:
 
 ```bash
-git clone https://github.com/Jakeschincariol/chatgpt-youtube-agent-skill
+claude plugin marketplace add omer7yy/chatgpt-youtube-agent-skill
+claude plugin install youtube-agent@chatgpt-youtube-agent-skill
+```
+
+If Claude Code says the plugin needs reloading, run `/reload-plugins` in the session.
+The skills are namespaced; for example, use `/youtube-agent:yt-script`.
+
+### ChatGPT / Codex (manual)
+
+Paste this repository link into ChatGPT and say **install skill**:
+
+```
+https://github.com/omer7yy/chatgpt-youtube-agent-skill
+```
+
+For Codex, clone the repository and copy the skills:
+
+```bash
+git clone https://github.com/omer7yy/chatgpt-youtube-agent-skill
 cp -r chatgpt-youtube-agent-skill/skills/yt-* ~/.codex/skills/
 ```
 
