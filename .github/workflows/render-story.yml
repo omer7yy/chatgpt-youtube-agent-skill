@@ -1,0 +1,28 @@
+name: Render 03:17 cinematic story
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install system tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Install Python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install Pillow edge-tts
+      - name: Render video
+        run: python scripts/render_story.py
+      - name: Upload MP4
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0317-gelecekten-gelen-mesaj
+          path: output/0317_gelecekten_gelen_mesaj.mp4
+          if-no-files-found: error
