@@ -82,7 +82,7 @@ async def main():
         probe = subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","default=noprint_wrappers=1:nokey=1",str(audio)], text=True)
         duration = float(probe.strip()) + 1.8
         frames = max(24, int(duration*24))
-        vf = f"zoompan=z='min(zoom+0.00035,1.055)':d={frames}:s={W}x{H}:fps=24,format=yuv420p"
+        vf = f"zoompan=z='min(zoom+0.00035,1.055)':d=1:s={W}x{H}:fps=24,format=yuv420p"
         subprocess.run(["ffmpeg","-y","-loglevel","error","-loop","1","-i",str(frame),"-i",str(audio),"-vf",vf,"-t",str(duration),"-c:v","libx264","-preset","ultrafast","-crf","22","-c:a","aac","-b:a","160k","-shortest",str(clip)],check=True)
         concat.append(clip)
     listfile = WORK / "concat.txt"
