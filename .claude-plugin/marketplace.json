@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "chatgpt-youtube-agent-skill",
+  "description": "YouTube Agent skill pack maintained by omer7yy",
+  "owner": {
+    "name": "omer7yy",
+    "url": "https://github.com/omer7yy"
+  },
+  "plugins": [
+    {
+      "name": "youtube-agent",
+      "description": "Eleven YouTube skills for scripts, packaging, editing, retention, Shorts, chapters, SEO, comments, planning, audits and niche research.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/omer7yy/chatgpt-youtube-agent-skill"
+    }
+  ]
+}
