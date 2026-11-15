@@ -1,0 +1,22 @@
+{
+  "name": "youtube-agent",
+  "description": "Eleven YouTube channel skills: scored hooks and scripts, title-thumbnail packaging, editing decisions, retention analysis, Shorts extraction, chapters, SEO, comments, planning, channel audits and niche research.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ömer",
+    "url": "https://github.com/omer7yy"
+  },
+  "homepage": "https://github.com/omer7yy/chatgpt-youtube-agent-skill",
+  "repository": "https://github.com/omer7yy/chatgpt-youtube-agent-skill",
+  "license": "MIT",
+  "keywords": [
+    "youtube",
+    "shorts",
+    "retention",
+    "thumbnails",
+    "titles",
+    "content",
+    "video",
+    "seo"
+  ]
+}
